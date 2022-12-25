@@ -8,8 +8,14 @@ Docker events are fired by Docker when something interesting happens in the life
 
 ## Usage
 
+### Linux
 ```bash
-docker run --name docker-watch --restart on-failure[5] -d -v /var/run/docker.sock:/var/run/docker.sock -v config.yml:/app/config.yml ngregrichardson/docker-watch:latest
+docker run --name docker-watch --restart on-failure:5 -d -v /var/run/docker.sock:/var/run/docker.sock -v /<path_to_config>/config.yml:/app/config.yml docker-watch
+```
+
+### Windows
+```bash
+docker run --name docker-watch --restart on-failure:5 -d -v /var/run/docker.sock:/var/run/docker.sock -v C:/Users/<path_to_config>/config.yml:/app/config.yml docker-watch
 ```
 
 ## Development
