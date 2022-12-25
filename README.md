@@ -1,4 +1,4 @@
-# Docker Watch
+# Docker Watch [![Docker Image Version](https://img.shields.io/docker/v/ngregrichardson/docker-watch/latest)](https://hub.docker.com/repository/docker/ngregrichardson/docker-watch)
 
 ## About
 Docker Watch is a containzerized Python script that allows you to easily set up and configure monitoring Docker events. This lets you get notified if (and, lets be honest, when) a container crashes, a service is removed, or anything that Docker emits events for.
@@ -9,7 +9,7 @@ Docker events are fired by Docker when something interesting happens in the life
 ## Usage
 
 ```bash
-docker run --name docker-watch --restart on-failure[5] -d -v /var/run/docker.sock:/var/run/docker.sock -v config.yml:/app/config.yml docker-watch
+docker run --name docker-watch --restart on-failure[5] -d -v /var/run/docker.sock:/var/run/docker.sock -v config.yml:/app/config.yml ngregrichardson/docker-watch:latest
 ```
 
 ## Development
